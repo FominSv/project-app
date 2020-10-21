@@ -1,0 +1,75 @@
+.hello{
+    background-image: url('/assets/img/pink-flower.jpg');
+    background-size: cover;
+    background-position: center center; 
+    width: 100%;
+    margin: 50px auto;
+    height: 210px;
+    text-align: center;
+    padding: 100px;
+}
+
+
+.form{
+  padding-top: 50px;
+  padding-bottom: 50px;
+    
+  
+  }
+
+  
+.form-control.ng-touched.ng-invalid{
+border: 2px solid red;
+}
+.form-control{
+  border: 2px solid rgb(253, 180, 192);
+}
+
+  .contact-infor {
+    background: #f2f2f2 none repeat scroll 0 0;
+    padding: 20px 30px;
+  }
+ 
+  
+  
+  .contact-dec > p {
+    margin-bottom: 30px;
+  }
+  
+  .contact-address {
+    margin-bottom: 10px;
+  }
+  .contact-address li {
+    border-top: 1px solid #e4e4e4;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .contact-address li:first-child {
+    border-top: none;
+  }
+  .contact-address li i {
+    margin-right: 5px;
+  }
+  
+  .work-hours {
+    margin-bottom: 15px;
+  }
+
+.submit-btn {
+    background: darkgray;
+    border: 0 none;
+    border-radius: 3px;
+    color: grey;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+
+  }
+  
+  .submit-btn:hover {
+    background: #ff5151;
+  }

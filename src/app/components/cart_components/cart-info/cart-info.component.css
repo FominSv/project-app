@@ -1,0 +1,13 @@
+.card-text{
+text-align: center;
+color: blue;
+margin: auto;
+}
+
+
+.vl {
+    border-left: 2px solid white;
+    height: 2px;
+  
+     
+  }

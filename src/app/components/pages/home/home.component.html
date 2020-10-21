@@ -1,0 +1,73 @@
+<div class="col-lg-12">
+  <div class="row">
+    <div class=" today col-lg-3 col-sm-12">
+      <h4>{{today| date}}</h4>
+    </div>
+    <div class="search col-lg-5 col-sm-12">
+       
+         <div class="input-group" >
+           <input   
+            #query 
+            (keyup)="filter(query.value)" (keyup)="onCloseSearch()"
+            type="text" class="form-control"  
+            placeholder="Search..."/>
+     
+        <div class="input-group-append">
+               <button class="btn btn-secondary" type="button" style= "cursor:pointer">
+          <i class="fa fa-search" (click)="onCloseSearch()" ></i>
+              </button>
+            </div>
+     
+      <div class="search-results" *ngIf="showSearch">
+        <ul style="list-style-type:none" *ngIf="products && products.length > 0">
+
+        <li  *ngFor="let product of filteredProducts | slice:0:5  "> 
+            <a [routerLink]= "['/details', product._id]"  >
+              {{product.ProductName}}</a>
+          </li>
+        </ul>
+      </div> 
+    </div>
+  </div>
+  <div class="cart-info col-lg-4  col-sm-12">
+    <app-cart-info></app-cart-info>
+  </div>
+</div>
+ 
+                  
+ <div class="hello col-md-12"> 
+    </div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+  <div class="row">
+    <div class="item" *ngFor="let product of filteredProducts | paginate: { itemsPerPage: 6, currentPage: pageActual}; let i = index"> 
+     <div class="card"  style="width: 20rem;">
+      <a [routerLink]= "['/details', product._id]"><img src="{{product.ProductImage}}" class="card-img-top" alt="..."></a>
+    <div class="card-body">
+      <h5 class="card-title">{{ product.ProductName }}</h5>
+      <h2 class="card-text">{{ product.ProductPrice | currency}}</h2>
+      <p class="card-text">{{ product.ProductDescription | slice: 0:70 }}...</p>
+    </div>
+            <div class="button">
+        <div class="btn-group">
+         
+      <button (click) = "addProductCart(product)"   type="submit" style= "cursor:pointer"
+      class="btn btn-outline-danger btn-sm" >
+        Add <br>Product
+      </button>
+      
+        <a [routerLink]= "['/details', product._id]"  class="btn btn-outline-success btn-sm">View <br>Details</a>
+  
+  </div>
+  </div>
+   
+        </div>
+  </div>
+
+</div>
+</div>
+
+<div class="text-center">
+<pagination-controls (pageChange) ="pageActual = $event"></pagination-controls>
+</div>
+
+

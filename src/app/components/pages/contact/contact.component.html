@@ -1,0 +1,100 @@
+
+<div class="hello">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 >Contact Us</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form">
+     <div class="row" >
+        <div class="col-lg-7 col-sm-12" >
+                      
+            <h1>Contact us </h1>
+
+            <form [formGroup] = "frm">
+                <div class="form-group">
+                    <label> Name</label>
+                    <input type="text" formControlName="txtName" #txtName class="form-control" />
+                </div>
+                <div *ngIf="frm.controls['txtName'].invalid && (frm.controls['txtName'].dirty || 
+                frm.controls['txtName'].touched)" class="alert alert-danger">
+                Be sure to enter a right  Name.
+                    <div *ngIf="frm.controls['txtName'].errors.required">
+                         Name is Required!
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label> Family Name</label>
+                    <input type="text" formControlName="txtFamilyName" #txtFamilyName class="form-control" />
+                </div>
+                <div *ngIf="frm.controls['txtFamilyName'].invalid && (frm.controls['txtFamilyName'].dirty || 
+                frm.controls['txtFamilyName'].touched)" class="alert alert-danger">
+                Be sure to enter a right Family Name.
+                    <div *ngIf="frm.controls['txtFamilyName'].errors.required">
+                        Family Name is Required!
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label> Email:</label>
+                <input type="email" formControlName="txtEmail" #txtEmail class="form-control" />
+            </div>
+            <div *ngIf="frm.controls['txtEmail'].invalid && (frm.controls['txtEmail'].dirty || 
+            frm.controls['txtEmail'].touched)" class="alert alert-danger">
+            Be sure to enter a right email.
+                <div *ngIf="frm.controls['txtEmail'].errors.required">
+                    Email is Required!
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label>Your message</label>
+                    <textarea class="form-control" rows = "7" cols = "5" formControlName="txtMes" #txtMes></textarea> 
+                </div>
+                <div *ngIf="frm.controls['txtMes'].invalid && (frm.controls['txtMes'].dirty || 
+                frm.controls['txtMes'].touched)" class="alert alert-danger">
+                    <div *ngIf="frm.controls['txtMes'].errors.required">
+                        Message is Required!
+                    </div>
+                </div>
+    
+                <div class="form-group text-center mb-3 col-md-12">
+                    <button (click)="onSubmit()" 
+                                [disabled] = "frm.pristine || frm.invalid"
+                                 class="submit-btn">
+                                       Send
+                    </button>
+                      
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-5 col-sm-12">
+            <div class="contact-infor">
+           
+                <h1>Our address</h1>
+            
+            <div class="contact-dec">
+                <p>You always can say us about servis</p>
+            </div>
+            <div class="contact-address">
+    <ul>
+        <li>Address: Yokneam Illit</li>
+        <li> Email: fomina.svetlana21@gmail.com</li>
+        <li> Phone number: 052-327-47-57 </li>
+    </ul>
+            </div>
+            <div class="work-hours">
+        <h5>Working hours</h5>
+        <p><strong>Sunday-Friday: 08am-20pm</strong></p>
+   </div>
+ </div>
+</div>
+</div>
+ </div>   
+    

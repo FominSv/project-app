@@ -1,0 +1,11 @@
+.logo{
+  font-size: 12px;  
+}
+.dropdown{
+  color: blue;
+  cursor: pointer;
+}
+
+.dropdown-item{
+  color: blue;
+}

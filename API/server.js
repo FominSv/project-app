@@ -17,16 +17,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Svetik:Sv5335970Mx@cl
   err => { console.log('Can not connect to the database'+ err)}
 );
 
-// mongoose.connect(
-//   "mongodb+srv://Svetik:Sv5335970Mx@cluster0.ydzjy.mongodb.net/MyProduct?retryWrites=true&w=majority"
-// ).then(() => {
-//   console.log("Connected to database!");
-// })
-// .catch(() => {
-//   console.log("Connection failed!");
-// });
-
-
 
 const app = express();
 app.use(bodyParser.json());
@@ -46,45 +36,7 @@ if (process.env.NODE_ENV === "production") {
  res.status(200).sendFile(path.resolve(__dirname + './../dist/myProject/index.html'));  
   });  
 }
-// const express = require('express'),
-//  app = express();
-// bodyParser = require('body-parser'),
-// mongoose = require('mongoose');
-// config = require('./DB');
-// cors = require('cors');
-// var path = require('path')
-// app.use(bodyParser.json());
-// app.use(cors());
 
-
-
-// //  const MONGODB_URI = 'mongodb+srv://Svetik:Sv5335970Mx@cluster0.ydzjy.mongodb.net/MyProduct?retryWrites=true&w=majority'
-
-// mongoose.Promise = global.Promise;
-// mongoose.connect(config.DB,
-//   // process.env.MONGODB_URI || config.DB,
-//   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
-//   .then(() => {console.log('Database is connected') },
-//    err => { console.log('Can not connect to the database'+ err)}
-//  );
-
-
-
-
-
-// const productRoute = require('./routes/product.route');
-// const cartRoute = require('./routes/cart.route');
-
-
-// app.use('/products', productRoute);
-// app.use('/carts', cartRoute);
-
-// let port = process.env.PORT || 3000;
-// app.listen(port, ()=>{
-//   console.log('Listening to port ' + port);
-//   });
-
-  
  
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");

@@ -9,8 +9,8 @@ import { Product } from '../model/Product';
 })
 export class CartService {
   
-  uri = 'http://localhost:3000/products';
-  uriCart = 'http://localhost:3000/carts';
+  uri = 'http://localhost:8080/products';
+  uriCart = 'http://localhost:8080/carts';
 
   cartItems: CartItem[]= [];
   itemsChanged: EventEmitter<CartItem[]> = new EventEmitter<CartItem[]>(); 

@@ -1,6 +1,7 @@
 {
   "name": "my-project",
   "version": "0.0.0",
+  
   "scripts": {
     "ng": "ng",
     "server": "nodemon  API/server.js",
@@ -9,9 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "start:server": "nodemon API/server.js",
     "postinstall": "ng build --prod"
-   
+    
   },
+  
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.0.7",
@@ -67,8 +70,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
+  },
+  "engines": 
+  { "node": "12.16.1",
+    "npm": "6.13.4"
+    }
   }
-  
-
-
-}

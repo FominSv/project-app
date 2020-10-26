@@ -25,7 +25,7 @@ app.use(cors());
 app.use('/products', productRoute);
 app.use('/carts', cartRoute);
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 8080;
 app.listen(port, ()=>{
   console.log('Listening to port ' + port);
 });
@@ -33,7 +33,7 @@ app.listen(port, ()=>{
 if (process.env.NODE_ENV === "production") {
  app.use(express.static(__dirname + './../dist/myProject'));  
  app.all('*', (req, res) => {  
- res.status(200).sendFile(path.resolve(__dirname + './../dist/myProject/index.html'));  
+ res.status(200).sendFile(path.join(__dirname + './../dist/myProject/index.html'));  
   });  
 }
 
